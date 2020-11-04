@@ -1,0 +1,15 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block html
+    - var meta_title = '404'
+    - var page_layout = 'default'
+    - var bodyclass = ''
+
+block content
+    section#page404.container-content
+        div
+            div
+                h1 404
+                h3 Error page
+                a.btn-orange(href="#") Go home

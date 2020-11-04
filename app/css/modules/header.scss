@@ -1,0 +1,36 @@
+.header {
+	padding-top: var(--space-side);
+	padding-bottom: var(--space-side);
+
+	& > div {
+		display: grid;
+		grid-template-columns: 240px auto;
+		gap: var(--space);
+	}
+}
+
+.header-nav {
+	justify-self: end;
+	text-align: right;
+
+	nav {
+		margin-bottom: calc(var(--space)/2);
+	}
+
+	a {
+		color: var(--color-text);
+		display: inline-block;
+		margin-left: var(--space);
+		@extend %link_noline;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&.pin {
+			color: var(--color-red);
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+button {
+    @extend %link_noline;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+
+    display: inline-block;
+    padding: 12px 30px;
+    text-align: center;
+    background-color: var(--color-green);
+    border: 0;
+    outline: 0;
+    font-size: var(--font-size-text);
+    border-radius: 16px;
+    
+    transition: all 0.2s ease-in-out;
+}

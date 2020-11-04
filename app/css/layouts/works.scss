@@ -1,0 +1,185 @@
+.works {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+    &__info {
+
+        &.popup {
+            background: var(--color-body);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+            height: 100vh;
+            overflow-y: scroll;
+
+            @extend %hidden;
+            pointer-events: none;
+            // display: none;
+
+            &.active {
+                animation: FadeIn 0.2s var(--animation-bump) var(--animation-appeardelay) forwards;
+                // display: block;
+                pointer-events: visible;
+            }
+        }
+
+        .close {
+            display: block;
+            @extend %link_noline;
+
+            position: absolute;
+            top: calc(var(--space-side) * 2);
+            right: calc(var(--space-side) * 2);
+            width: 29px;
+            height: 29px;
+
+            transform-origin: center center;
+            transform: rotate(45deg);
+
+            @extend %hidden;
+            animation: FadeIn 0.4s var(--animation-bump) var(--animation-appeardelay) forwards;
+            transition: 0.4s ease all;
+
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                background-color: var(--color-gray);
+            }
+            &::after {
+                top: calc(50% - 1px);
+                left: 0;
+                right: 0;
+                height: 2px;
+            }
+
+            &::before {
+                left: calc(50% - 1px);
+                top: 0;
+                bottom: 0;
+                width: 2px;
+            }
+
+            &:hover {
+                &::before, &::after {
+                    background-color: var(--color-orange);
+                }
+
+                opacity: .5;
+            }
+        }
+
+
+        .data {
+            margin-top: calc( var(--space-side) * 5);
+            // height: 100%;
+            // overflow-y: auto;
+            // padding-right: calc( var(--space-side) * 4);
+
+            .data__photos, .data__info { 
+                float: left;
+                width: 60%;
+            }
+            
+            .data__info {
+                margin-left: 5%;
+                width: 35%;
+
+                h3 {
+                    text-align: left;
+                    font-weight: 700;
+                    margin-bottom: 0;
+                }
+
+                div {
+                    margin-bottom: 40px;
+                    
+                    &:first-child {
+                        margin-bottom: 70px;
+                    }
+
+                    strong {
+                        display: block;
+                    }
+                }
+
+            }
+
+            .data__photos {
+                img { 
+                    display: block;
+                    width : 100%;
+	                height: auto;
+                }
+            }
+
+
+            @media screen and (max-width: 700px) {
+                .data__photos, .data__info {
+                    float: none;
+                    width: 100% !important;
+                }
+
+                .data__info {
+                    &__inside { padding: 0 20px; }
+                    margin-left: 0;
+                    width: 100% !important;
+                    box-sizing: border-box;
+
+                    div {
+                        &, &:first-child { margin-bottom: 20px; }
+                        &:first-child { margin-top: 40px; }
+                    }
+                }
+            }
+        }
+    }
+
+    &__item {
+        transition: all 0.2s ease;
+        text-align: center;
+        
+        &:not([class*="active"]) {
+            cursor: pointer;
+
+            &:hover {
+                opacity: .6;
+            }
+        }
+
+
+        &__cover {
+            display: block;
+            max-width: 100%;
+        }
+
+        &__title {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: var(--font-size-text);
+            font-family: var(--font-family-text);
+            letter-spacing: 0;
+            margin: 15px 0 5px;
+        }
+
+        &__desc {
+            font-style: italic;
+        }
+
+        &.active {
+            *[class *= "__title"] {
+                color: var(--color-orange);
+            }
+        }
+
+    }
+
+
+    @media screen and (max-width: 680px) {
+        grid-template-columns: 1fr;
+    }
+}

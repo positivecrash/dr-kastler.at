@@ -1,0 +1,196 @@
+.phrasewindow {
+    display: block;
+    width: 280px;
+    height: 280px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    color: var(--color-orange);
+    @extend %link_noline;
+    font-family: var(--font-family-headings);
+    font-size: calc( var(--font-size-text) + 12px );
+    text-transform: uppercase;
+    padding: calc( var(--space-side) + 20px ) calc( var(--space-side) + 10px );
+    font-weight: 600;
+
+    span {
+        visibility: hidden;
+		opacity: 0;
+    }
+
+    &.animated span {
+        animation: FadeIn var(--animation-duration-border) var(--animation-bump)  var(--animation-scrolldelay) forwards;
+    }
+}
+
+.hirschtree-wrap {
+    text-align: center;
+    overflow: hidden;
+}
+
+.hirschtree {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    left: -120px;
+    // white-space: nowrap;
+
+    @media screen and (max-width: 1080px) {
+        transform: scale(0.9);
+    }
+
+    @media screen and (max-width: 920px) {
+        transform: scale(0.7);
+    }
+
+
+    .item {
+        display: block;
+        box-sizing: border-box;
+        width: 180px;
+        padding: 10px;
+        @extend %link_noline;
+        color: var(--color-text);
+        background-color: var(--color-body);
+        white-space: normal;
+
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 1px;
+            height: 20px;
+            background-color: var(--color-darkblue);
+            z-index: -1;
+            position: absolute;
+            top: -20px;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto 10px;
+        }
+
+        &__name, &__share {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        &__name {
+            font-size: calc( var(--font-size-text) - 2px);
+            display: block;
+            width: 98%;
+        }
+
+        &__share {
+            font-size: calc( var(--font-size-text) + 2px);
+            display: block;
+            overflow: hidden;
+            font-weight: 700;
+            text-align: center;
+            color: var( --color-body);
+            
+            b {
+                float: left;
+                box-sizing: border-box;
+                padding: 2px 4px;
+                background-color: var(--color-darkblue);
+                width: 100%;
+                font-weight: 600;
+
+                &:first-child {
+                    background-color: var(--color-green);
+                }
+ 
+                &.s-30 { width: 30%; }
+                &.s-50 { width: 50%; }
+                &.s-70 { width: 70%; }
+            }
+        }
+
+        &.head {
+            margin-top: -10px !important;
+
+            &::before {
+                display: none;
+            }
+
+            &:hover { opacity: 1 !important; }
+        }
+    }
+
+    .level-1, .level-2, .level-3 {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            background-color: var(--color-darkblue);
+            z-index: -1;
+        }
+
+        &:before {
+            top: 20px;
+            left: 90px;
+            right: 90px;
+            height: 1px;
+        }
+
+        &:after {
+            top: 0;
+            left: calc( 50% - 0.5px );
+            height: 20px;
+            width: 1px;
+        }
+
+        .item {
+            margin-top: 40px;
+            &:hover { opacity: 0.7; }
+        }
+    }
+
+    .level-1 {
+        width: 630px;
+    }
+
+    .level-2, .level-3 {
+        width: 750px;
+        left: 166px;
+
+        .item {
+            width: 150px;
+        }
+
+        &:before {
+            left: 75px;
+            right: 75px;
+        }
+    }
+
+    .level-3 {
+        width: 418px;
+        left: 632px;
+
+        .item__share b {
+            background-color: var(--color-darkblue);
+        }
+    }
+
+
+}
+
+
+.hirschtree-mobile {
+    display: none;
+    margin: 0 auto;
+    
+    img { max-width: 100%; }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .hirschtree-mobile { display: block; }
+    .hirschtree { display: none; }
+}

@@ -1,0 +1,48 @@
+%link_noline
+	{
+	  &, &:hover, &:focus, &:visited{
+	    text-decoration: none;
+	    text-decoration: none !important;
+	  }
+	}
+
+%text_uppercase
+	{
+		text-transform: uppercase;
+        letter-spacing: 1px;
+	}
+
+%hidden
+	{
+		visibility: hidden;
+		opacity: 0;
+	}
+
+%visible
+	{
+		visibility: visible;
+  		opacity: 1;
+	}
+
+%showUp
+	{
+		visibility: hidden;
+		opacity: 0;
+		transform: translateY(10%);
+
+		&.animated {
+			animation-name: FadeIn, FloatYUp;
+			animation-duration: var(--animation-appearduration);
+			animation-timing-function: linear;
+			animation-delay: var(--animation-appeardelay);
+			animation-fill-mode: forwards;
+		}
+	}
+
+
+%fix_grid {
+	& > * {
+		min-width: 0;
+		max-width: 100%;
+	}
+}

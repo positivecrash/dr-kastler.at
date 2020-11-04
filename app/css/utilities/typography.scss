@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: var(--font-family-text);
+	font-size: var(--font-size-text);
+	line-height: 1.7;
+}
+
+#{headings()} {
+	font-family: var(--font-family-headings);
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+	margin: calc( var(--space-side) * 2 ) 0;
+}
+
+h2, h3, h4, h5 {
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+h1 {
+	font-weight: 700;
+	font-family: var(--font-family-text);
+	font-size: calc(var(--font-size-text) + 11px);
+
+	&, a {
+		color: var(--color-orange);
+	}
+
+	a { @extend %link_noline; }
+}
+
+h2 {
+	font-size: calc(var(--font-size-text) + 18px);
+	color: var(--color-darkblue);
+	letter-spacing: 2px;
+}
+
+h3 {
+	font-family: var(--font-family-text);
+	color: var(--color-orange);
+	font-size: calc(var(--font-size-text) + 7px);
+}
+
+h4 {
+	text-align: left;
+	font-family: var(--font-family-text);
+	font-size: calc(var(--font-size-text) + 2px);
+	font-weight: 700;
+	color: var(--color-orange);
+	margin-bottom: var(--space-side);
+}
+
+ul, ol, li, p, blockquote, .p {
+	margin-bottom: 40px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+a {
+	transition: all 0.2s ease;
+}
+
+p {
+	line-height: 1.8;
+}
+
+.text-center { text-align: center; }
+.color-orange { color: var(--color-orange); }
+.imgTitle {
+	color: #FAB900;
+	padding-top: 10px;
+}

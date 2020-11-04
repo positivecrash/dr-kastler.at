@@ -1,0 +1,115 @@
+%serviceLink {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-darkblue);
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    height: 60px;
+}
+
+.services {
+    position: relative;
+    
+    &__image {
+        position: absolute;
+        top: 40px;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+        background-size: cover;
+        background-image: image-url('service-default.jpg');
+
+        @media screen and (max-width: 600px) {
+            bottom: -40px;
+        }
+    }
+
+    &__border {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        // border: 12px solid var(--color-orange);
+        z-index: 0;
+
+        @media screen and (max-width: 600px) {
+            opacity: 0;
+        }
+    }
+
+    &__list {
+        display: inline-block;
+        position: relative;
+    }
+    
+    &__listcontent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        max-width: 600px;
+
+        padding: 80px 40px;
+
+        position: relative;
+        z-index: 2;
+
+        @media screen and (max-width: 600px) {
+            grid-template-columns: 1fr;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+        }
+
+        a {
+            @extend %link_noline;
+            @extend %serviceLink;
+
+            &:hover {
+                background-color: var(--color-orange);
+            }
+        }
+    }
+}
+
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    gap: 20px;
+
+    @media screen and (max-width: 1200px) {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+
+    @media screen and (max-width: 450px) {
+        grid-template-columns: minmax(150px, 1fr);
+    }
+
+    a {
+        @extend %link_noline;
+        @extend %serviceLink;
+        height: 100px;
+
+        &.current {
+            background-color: var(--color-orange);
+            cursor: default;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
