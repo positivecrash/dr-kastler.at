@@ -15,8 +15,13 @@
     <header class="header" role="banner">
       <div class="container-content"><a href="/"><img alt="Dr. KASTLER Allgemeinmedizin" src="assets/i/logo-dr-kastler.svg"></a>
         <div class="header-nav">
-          <nav><a class="pin" href="#">Info</a><a href="#">Leistungen</a><a href="#">Team</a><a href="#">Apotheke</a><a href="#">Ordinationszeiten & Kontakt</a><a href="#">07269/205</a></nav>
-          <button>Online-Termin</button>
+          <nav id="mobilemenu"><a class="pin" href="#">Info</a><a class="active" href="#">Leistungen</a><a href="#">Team</a><a href="#">Apotheke</a><a href="#">Ordinationszeiten & Kontakt</a><a href="tel:07269/205" target="_blank">07269/205</a></nav>
+          <div class="toggler-wrap">
+            <div class="toggler" data-content="mobilemenu"><span></span><span></span><span></span></div>
+          </div>
+          <div>
+            <button>Online-Termin</button>
+          </div>
         </div>
       </div>
     </header>

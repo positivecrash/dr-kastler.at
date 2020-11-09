@@ -7,5 +7,42 @@ block html
 	- var bodyclass = ''
 
 block content
+	//- link(rel="stylesheet", href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css")
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+	script(src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js")
+
+	script.
+		$(document).ready(function(){
+			$('.slider').bxSlider({
+				controls: false
+			});
+		});
+
+
 	.container-content
-		p test
+		.home
+			.home-left
+				.section__green
+					p In Ordination:
+					p Dr. Kastler
+
+				.section__orange
+					p Informationen:
+					p
+						| - 24.07-30.07 - geschlossen
+						br/
+						| - Zeckenimpfungszeit
+
+				.section__blue
+					p Hausärztlicher Notdienst
+					p
+						| Ausserhalb der
+						br/
+						| Ordinationszeiten
+						br/
+						| bzw. geschlossener Ordination
+						
+			.home-right
+				.slider
+					div: img(alt="", src="assets/i/tmp/DSC_9481.jpg")
+					div: img(alt="", src="assets/i/tmp/DSC_9481.jpg")

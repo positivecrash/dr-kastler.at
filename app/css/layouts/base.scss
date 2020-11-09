@@ -5,37 +5,23 @@ body
   {
     opacity: 0;
     animation: 0.4s FadeIn ease-in forwards;
-
-    @media screen and (max-width: 1000px) {
-      padding-top: 105px;
-    }
   }
 
 
 //sticky footer -- grid
-body:not([class*='home']) {
+body {
 
   min-height: 100%;
   @extend %fix_grid;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  gap: 50px;
   
   .footer {
     grid-row-start: 3;
     grid-row-end: 4;
   }
 }
-
-body.default,  body.social{
-  main {
-    section:first-child {
-      margin-top: calc(var(--space-section)/2);
-    }
-
-    padding-bottom: var(--space-section);
-  }
-}
-
 
 
 /*====== Set width of container ======*/
@@ -71,4 +57,20 @@ body.default,  body.social{
 section {
   // margin-top: var(--space-section);
   margin-bottom: var(--space-section);
+}
+
+.section__green, .section__orange, .section__blue {
+  padding: 25px;
+}
+
+.section__green {
+  background-color: var(--color-green);
+}
+
+.section__orange {
+  background-color: var(--color-orange);
+}
+
+.section__blue {
+  background-color: var(--color-blue);
 }

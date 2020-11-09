@@ -4,9 +4,13 @@ body {
     --color-text: #000000;
     --color-body: #ffffff;
     --color-green: #BAE503;
+    --color-green-dark: #769C21;
     --color-red: #FF0000;
+    --color-orange: #FFCB3C;
+    --color-blue: #D0E7FF;
 
     --space-side: 40px;
     --space: var(--space-side);
+    --space-text: calc(var(--space-side)/2);
     --space-section: 100px;
 }

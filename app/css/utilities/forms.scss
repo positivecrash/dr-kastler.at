@@ -14,4 +14,9 @@ button {
     border-radius: 16px;
     
     transition: all 0.2s ease-in-out;
+
+    &:hover {
+        background-color: var(--color-red);
+        color: #fff
+    }
 }

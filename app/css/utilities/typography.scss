@@ -64,7 +64,7 @@ h4 {
 }
 
 ul, ol, li, p, blockquote, .p {
-	margin-bottom: 40px;
+	margin-bottom: var(--space-text);
 
 	&:last-child {
 		margin-bottom: 0;
@@ -84,4 +84,10 @@ p {
 .imgTitle {
 	color: #FAB900;
 	padding-top: 10px;
+}
+
+a {
+	&:hover {
+		opacity: 0.7;
+	}
 }
