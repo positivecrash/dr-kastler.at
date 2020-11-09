@@ -2,10 +2,23 @@
     display: grid;
     grid-template-columns: minmax(280px,280px) minmax(0,auto);
     gap: 25px;
+
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: minmax(0,1fr);
+    }
 }
 
 .home-left {
     display: grid;
-    grid-template-rows: repeat(1fr, 3);
+    grid-template-rows: repeat(3, 1fr);
     gap: 25px;
+
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: repeat(3 , 1fr);
+        grid-template-rows: auto
+    }
+
+    @media screen and (max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
 }
