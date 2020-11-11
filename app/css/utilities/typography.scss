@@ -1,5 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@font-face { 
+    font-family: "Muli";
+    src: url(../fonts/Muli/web/Muli-Regular.eot?) format("eot"), 
+         url(../fonts/Muli/web/Muli-Regular.woff) format("woff"), 
+         url(../fonts/Muli/web/Muli-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: "Muli";
+    src: url(../fonts/Muli/web/Muli-Bold.eot?) format("eot"), 
+         url(../fonts/Muli/web/Muli-Bold.woff) format("woff"), 
+         url(../fonts/Muli/web/Muli-Bold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
 
 html {
 	font-size: 100%;
@@ -13,14 +28,16 @@ body {
 
 #{headings()} {
 	font-family: var(--font-family-headings);
-	font-weight: 300;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	text-align: center;
-	margin: calc( var(--space-side) * 2 ) 0;
+	color: var(--color-green-dark);
+	font-weight: normal;
 }
 
 h2, h3, h4, h5 {
+	margin: calc(var(--space-side)/2) 0;
+
 	&:first-child {
 		margin-top: 0;
 	}
@@ -31,36 +48,16 @@ h2, h3, h4, h5 {
 }
 
 h1 {
-	font-weight: 700;
-	font-family: var(--font-family-text);
-	font-size: calc(var(--font-size-text) + 11px);
-
-	&, a {
-		color: var(--color-orange);
-	}
-
-	a { @extend %link_noline; }
+	font-size: 35px;
+	margin-bottom: calc(var(--space-side)*1.5);
 }
 
 h2 {
-	font-size: calc(var(--font-size-text) + 18px);
-	color: var(--color-darkblue);
-	letter-spacing: 2px;
+	font-size: 25px;
 }
 
 h3 {
-	font-family: var(--font-family-text);
-	color: var(--color-orange);
-	font-size: calc(var(--font-size-text) + 7px);
-}
-
-h4 {
-	text-align: left;
-	font-family: var(--font-family-text);
-	font-size: calc(var(--font-size-text) + 2px);
-	font-weight: 700;
-	color: var(--color-orange);
-	margin-bottom: var(--space-side);
+	font-size: 20px;
 }
 
 ul, ol, li, p, blockquote, .p {
@@ -73,21 +70,24 @@ ul, ol, li, p, blockquote, .p {
 
 a {
 	transition: all 0.2s ease;
+
+	&:hover {
+		opacity: 0.7;
+	}
 }
 
 p {
 	line-height: 1.8;
 }
 
-.text-center { text-align: center; }
-.color-orange { color: var(--color-orange); }
-.imgTitle {
-	color: #FAB900;
-	padding-top: 10px;
-}
+.red { color: var(--color-red) }
 
-a {
-	&:hover {
-		opacity: 0.7;
-	}
+
+.info h1 { color: var(--color-red) }
+
+hr {
+	background-color: var(--color-gray);
+	height: 1px;
+	border: 0;
+	margin: calc(var(--space-side)/2) 0;
 }
