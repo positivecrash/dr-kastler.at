@@ -1,0 +1,32 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block html
+	- var meta_title = 'Informationen'
+	//- - var page_layout = 'home'
+	- var bodyclass = ''
+
+block content
+
+	.container-content-page
+		h1 Leistungen
+		.leistungen
+			nav
+				a(href="#").active Blutabnahme
+				a(href="#") Labor
+				a(href="#") Impfungen
+				a(href="#") Empfohlene Impfungen
+				a(href="#") Reiseimpfberatung
+				a(href="#") Physikalische Therapie
+				a(href="#") Manuelle Therapie
+				a(href="#") Mutter-Kind-Pass
+				a(href="#") Vorsorgeuntersuchung
+				a(href="#") Visiten
+				a(href="#") Krankmeldungen
+			
+			div
+				h2 Blutabnahme
+				p Blutabnahmetage Montag, Dienstag 7:30 – 8:30
+				p Nur mit Terminvereinbarung!
+				p Laborkontrollen bei regelmäßiger Medikamenteneinnahme mindestens 1x/Jahr bzw. nach Empfehlung oder Anweisung in bestimmten Intervallen.
+				p: img(alt="", src="assets/i/tmp/DSC_9481.jpg")

@@ -74,3 +74,69 @@ section {
 .section__blue {
   background-color: var(--color-blue);
 }
+
+
+img { 
+  display: block;
+  max-width: 100%;
+}
+
+
+
+.leistungen {
+  display: grid;
+  grid-template-columns: 260px auto;
+  gap: 40px;
+
+  nav {
+    a {
+      display: block;
+      @extend %link_noline;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text);
+      padding: 10px;
+      
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      &.active {
+        background-color: var(--color-green);
+      }
+
+      &:not(.active):hover {
+        background-color: rgba(219, 219, 219, 0.871)
+      }
+    }
+  }
+
+  h2, h3 { text-align: left; }
+
+
+  @media screen and (max-width: 820px){
+    grid-template-columns: auto;
+
+    nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      
+
+      a { font-size: 80%; word-break: break-all; margin: 0 !important; }
+    }
+  }
+
+  @media screen and (max-width: 620px) {
+    nav {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+
+  @media screen and (max-width: 420px) {
+    nav {
+      grid-template-columns: 1fr;
+    }
+  }
+}

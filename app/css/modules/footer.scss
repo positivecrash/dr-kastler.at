@@ -38,4 +38,18 @@
 .footer-top {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 440px) {
+        display: block;
+
+        & > div {
+            text-align: left;
+            margin-bottom: var(--space-side);
+        }
+
+        .footer-tel p {
+            display: block;
+            margin-left: 0;
+        }
+    }
 }

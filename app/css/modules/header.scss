@@ -128,3 +128,35 @@ body {
 		}
 	}
 }
+
+
+.header-logo {
+	display: inline-block;
+}
+
+.header .termin-mobile {
+	display: none;
+	width: 42px;
+	height: 42px;
+	box-sizing: border-box;
+	padding: 0;
+	border-radius: 8px;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+@media screen and (max-width: 420px) {
+	.header {
+		& > div {
+			grid-template-columns: auto auto;
+		}
+
+		.termin-desktop { display: none; }
+		.termin-mobile { display: flex; }
+	}
+
+	.header-logo { width: 180px; }
+
+	
+}

@@ -58,7 +58,12 @@ body {
   --space-section: 100px;
 }
 
-button, .button, .header-nav a, button:hover, .button:hover, .header-nav a:hover, button:focus, .button:focus, .header-nav a:focus, button:visited, .button:visited, .header-nav a:visited {
+@media screen and (max-width: 420px) {
+  body {
+    --space-side: 20px;
+  }
+}
+button, .button, .header-nav a, .leistungen nav a, button:hover, .button:hover, .header-nav a:hover, .leistungen nav a:hover, button:focus, .button:focus, .header-nav a:focus, .leistungen nav a:focus, button:visited, .button:visited, .header-nav a:visited, .leistungen nav a:visited {
   text-decoration: none;
   text-decoration: none !important;
 }
@@ -283,7 +288,7 @@ button, .button {
   -webkit-appearance: none;
   cursor: pointer;
   display: inline-block;
-  padding: 12px 30px;
+  padding: 8px 30px;
   text-align: center;
   background-color: var(--color-green);
   border: 1px solid var(--color-green);
@@ -495,6 +500,37 @@ body {
   }
 }
 
+.header-logo {
+  display: inline-block;
+}
+
+.header .termin-mobile {
+  display: none;
+  width: 42px;
+  height: 42px;
+  box-sizing: border-box;
+  padding: 0;
+  border-radius: 8px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 420px) {
+  .header > div {
+    grid-template-columns: auto auto;
+  }
+  .header .termin-desktop {
+    display: none;
+  }
+  .header .termin-mobile {
+    display: flex;
+  }
+
+  .header-logo {
+    width: 180px;
+  }
+}
 .footer {
   background-color: #222222;
   padding-top: var(--space-side);
@@ -529,6 +565,19 @@ body {
 .footer-top {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 440px) {
+  .footer-top {
+    display: block;
+  }
+  .footer-top > div {
+    text-align: left;
+    margin-bottom: var(--space-side);
+  }
+  .footer-top .footer-tel p {
+    display: block;
+    margin-left: 0;
+  }
 }
 
 html {
@@ -632,6 +681,61 @@ section {
 
 .section__blue {
   background-color: var(--color-blue);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.leistungen {
+  display: grid;
+  grid-template-columns: 260px auto;
+  gap: 40px;
+}
+.leistungen nav a {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text);
+  padding: 10px;
+}
+.leistungen nav a:not(:last-child) {
+  margin-bottom: 10px;
+}
+.leistungen nav a.active {
+  background-color: var(--color-green);
+}
+.leistungen nav a:not(.active):hover {
+  background-color: rgba(219, 219, 219, 0.871);
+}
+.leistungen h2, .leistungen h3 {
+  text-align: left;
+}
+@media screen and (max-width: 820px) {
+  .leistungen {
+    grid-template-columns: auto;
+  }
+  .leistungen nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  .leistungen nav a {
+    font-size: 80%;
+    word-break: break-all;
+    margin: 0 !important;
+  }
+}
+@media screen and (max-width: 620px) {
+  .leistungen nav {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 420px) {
+  .leistungen nav {
+    grid-template-columns: 1fr;
+  }
 }
 
 .home {

@@ -15,3 +15,9 @@ body {
     --space-text: calc(var(--space-side)/2);
     --space-section: 100px;
 }
+
+@media screen and (max-width: 420px) {
+    body {
+        --space-side: 20px;
+    }
+}
