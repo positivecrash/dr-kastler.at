@@ -2,15 +2,21 @@ include ../mixins/sections.pug
 
 header.header(role='banner')
 	.container-content
-		a.header-logo(href="/"): img(alt="Dr. KASTLER Allgemeinmedizin", src="assets/i/logo-dr-kastler.svg")
+		a.header-logo(href="/"): img(alt="Dr. KASTLER Allgemeinmedizin", src="assets/i/logo-dr-kastler.svg", itemprop="logo")
 		.header-nav
-			nav#mobilemenu
-				a.pin(href="#") Info
-				a.active(href="#") Leistungen
-				a(href="#") Team
-				a(href="#") Apotheke
-				a(href="#") Ordinationszeiten & Kontakt
-				a(href="tel:07269/205", target="_blank") 07269/205
+			nav#mobilemenu(itemscope, itemtype="http://schema.org/SiteNavigationElement")
+				a.pin(href="#", itemprop="url")
+					span(itemprop="name") Info
+				a.active(href="#", itemprop="url")
+					span(itemprop="name") Leistungen
+				a(href="#", itemprop="url")
+					span(itemprop="name") Team
+				a(href="#", itemprop="url")
+					span(itemprop="name") Apotheke
+				a(href="#", itemprop="url")
+					span(itemprop="name") Ordinationszeiten & Kontakt
+				a(href="tel:07269/205", target="_blank", itemprop="url")
+					span(itemprop="name") 07269/205
 
 			.toggler-wrap
 				.toggler(data-content="mobilemenu")

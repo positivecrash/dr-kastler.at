@@ -812,10 +812,11 @@ img {
   }
 }
 
-.kontakt-info p {
+.kontakt-info > div {
   display: grid;
   grid-template-columns: 40px auto;
   gap: 20px;
+  margin-bottom: var(--space-side);
 }
 
 table td, table th {
