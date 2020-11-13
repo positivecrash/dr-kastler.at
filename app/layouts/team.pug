@@ -1,0 +1,51 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block html
+	- var meta_title = 'Team'
+	//- - var page_layout = 'home'
+	- var bodyclass = ''
+
+block content
+
+	.container-content-page
+		h1 Team
+		
+		.team
+			.team-head
+				.member
+					img(alt="",src="assets/i/tmp/Dr-Michael-Kastler.jpg")
+					.member-info
+						.name Dr. Michael Kastler
+						.area Arzt für Allgemeinmedizin
+
+				.member
+					img(alt="",src="assets/i/tmp/Dr-Julia-Kastler.jpg")
+					.member-info
+						.name Dr. Julia Kastler
+						.area Ärztin für Allgemeinmedizin
+
+			.team-content
+				.member
+					img(alt="",src="assets/i/tmp/Edith-Scharf.jpg")
+					.member-info
+						.name Edith Scharf
+						.area Ordinationsassistentin
+
+				.member
+					img(alt="",src="assets/i/tmp/Eva-Resch.jpg")
+					.member-info
+						.name Eva Resch
+						.area Ordinationsassistentin
+
+				.member
+					img(alt="",src="assets/i/tmp/Sabine-Almeder-Enzenhofer.jpg")
+					.member-info
+						.name Sabine Almeder-Enzenhofer
+						.area Ordinationsassistentin
+
+				.member
+					img(alt="",src="assets/i/tmp/Tamara-Scharf.jpg")
+					.member-info
+						.name Tamara Scharf
+						.area Ordinationsassistentin
