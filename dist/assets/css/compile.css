@@ -55,7 +55,7 @@ body {
   --space-side: 40px;
   --space: var(--space-side);
   --space-text: calc(var(--space-side)/2);
-  --space-section: 100px;
+  --space-section: 60px;
 }
 
 @media screen and (max-width: 420px) {
@@ -149,6 +149,7 @@ ul:last-child, ol:last-child, li:last-child, p:last-child, blockquote:last-child
 
 a {
   transition: all 0.2s ease;
+  color: var(--color-text);
 }
 a:hover {
   opacity: 0.7;
@@ -160,6 +161,14 @@ p {
 
 .red {
   color: var(--color-red);
+}
+
+.green {
+  color: var(--color-green-dark);
+}
+
+.center {
+  text-align: center;
 }
 
 .info h1 {
@@ -786,6 +795,34 @@ img {
     max-width: 200px;
   }
 }
+.kontakt {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 60px;
+}
+.kontakt table {
+  width: 100%;
+}
+.kontakt table td:first-child {
+  background-color: var(--color-green);
+}
+@media screen and (max-width: 760px) {
+  .kontakt {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kontakt-info p {
+  display: grid;
+  grid-template-columns: 40px auto;
+  gap: 20px;
+}
+
+table td, table th {
+  border: 1px solid var(--color-gray);
+  padding: 10px;
+}
+
 .home {
   display: grid;
   grid-template-columns: minmax(280px, 280px) minmax(0, auto);

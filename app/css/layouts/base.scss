@@ -193,3 +193,40 @@ img {
     img { max-width: 200px; }
   }
 }
+
+
+
+.kontakt {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 60px;
+
+  table{
+    width: 100%;
+
+    td:first-child {
+      background-color: var(--color-green);
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kontakt-info {
+  p {
+    display: grid;
+    grid-template-columns: 40px auto;
+    gap: 20px;
+  }
+}
+
+
+
+table { 
+  td, th {
+    border: 1px solid var(--color-gray);
+    padding: 10px;
+  }
+}

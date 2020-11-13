@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33.608" height="39.763" viewBox="0 0 33.608 39.763">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Прямоугольник_74" data-name="Прямоугольник 74" width="33.608" height="39.763" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Сгруппировать_78" data-name="Сгруппировать 78" transform="translate(0 0)">
+    <g id="Сгруппировать_77" data-name="Сгруппировать 77" clip-path="url(#clip-path)">
+      <path id="Контур_42" data-name="Контур 42" d="M15.036,28.1C11.7,24.91,8.212,19.88,7.105,15.1a1.875,1.875,0,0,1,.87-2.011L11.591,10.9a1.89,1.89,0,0,0,.881-1.938L11.372,2.6A1.9,1.9,0,0,0,9.511,1.022L3.321,1A1.9,1.9,0,0,0,1.446,2.6C-1.331,20.161,9.191,34.334,23.418,38.681a1.893,1.893,0,0,0,2.162-.819l3.067-4.99a1.9,1.9,0,0,0-.453-2.489l-5.342-4.151a1.888,1.888,0,0,0-2.208-.081L17.4,28.317A1.893,1.893,0,0,1,15.036,28.1Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Контур_43" data-name="Контур 43" d="M18.189,9.233a23.988,23.988,0,0,1,8.6,13.652" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Контур_44" data-name="Контур 44" d="M18.487,2.649A29.608,29.608,0,0,1,32.609,23.528" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

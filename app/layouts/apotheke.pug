@@ -1,0 +1,19 @@
+extends extends/layout.pug
+include mixins/sections.pug
+
+block html
+	- var meta_title = 'Apotheke'
+	//- - var page_layout = 'home'
+	- var bodyclass = ''
+
+block content
+
+	.container-content-page
+		h1 Apotheke
+		.apotheke
+			section.container-content-narrow.center
+				p Als Ordination mit Hausapotheke können wir direkt nach dem Arztbesuch unseren Patienten die notwendigen Medikamente mitgeben. Wir führen alle gängigen Medikamente und falls notwendig und nicht lagernd können wir alle Medikamente in der Regel innerhalb von 24 Stunden für Sie organisieren.
+				p.green Die Hausapotheke ist zu den Ordinationszeiten geöffnet.
+				p Email-kontakt für Medikamentenbestellung: 
+					a(href="mailto:dr.kastler-medikamente@gmx.at") dr.kastler-medikamente@gmx.at
+			p: img(alt="", src="assets/i/tmp/Apotheke.jpg")
